@@ -1,0 +1,96 @@
+<div class="top-bar d-flex justify-content-between">
+    <div class="container-fluid p-0">
+        <div class="d-flex">
+            <div class="col-6 px-0 ">  
+                <div class="left">
+                    <ul class="contact-menu m-0 list-unstyled  d-flex">
+                        <li class="phone-number">
+                            <span class="icon-wrapper">
+                                <i class="fa fa-phone icon" aria-hidden="true"></i>
+                            </span>
+                            Call for Service! 
+                            <a href="tel::2334159872">
+                                ( 233 ) 415 9872
+                            </a>
+                        </li>
+                        <li class="email-id">
+                            <span class="icon-wrapper">
+                                <i class="fa fa-envelope-o icon" aria-hidden="true"></i>
+                            </span>
+                            Email 
+                            <a href="mailto:info@example.com">info@example.com</a>
+                        </li>
+                    </ul>   
+                </div>
+            </div>
+            <div class="col-6 px-0 ">
+                <div class="right">
+                    <div class="social-links-wrapper m-0 list-unstyled d-flex    justify-content-end">
+                        <ul class="social-menu m-0 list-unstyled d-flex">
+                            <li class="social-item">
+                                <a href="https://www.facebook.com/" class="social-link" target="_blank">
+                                    <span class="icon-wrapper">
+                                        <i class="fa fa-facebook-official icon" aria-hidden="true"></i>
+                                    </span>
+                                </a>    
+                            </li>
+                            <li class="social-item">
+                                <a href="http://twitter.com/" class="social-link" target="_blank">
+                                    <span class="icon-wrapper">
+                                        <i class="fa fa-twitter icon" aria-hidden="true"></i>
+                                    </span>
+                                </a>    
+                            </li>
+                            <li class="social-item">
+                                <a href="https://www.youtube.com/" class="social-link" target="_blank">
+                                    <span class="icon-wrapper">
+                                        <i class="fa fa-youtube-play icon" aria-hidden="true"></i>
+                                    </span>
+                                </a>    
+                            </li>
+                            <li class="social-item">
+                                <a href="https://www.instagram.com/" class="social-link" target="_blank">
+                                    <span class="icon-wrapper">
+                                        <i class="fa fa-instagram icon" aria-hidden="true"></i>
+                                    </span>
+                                </a>    
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main-header">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="logo">
+                <a href="">
+                   <span>
+                        <img src="../../../assets/images/logo.png" alt="Logo" title="Logo"/>
+                   </span>
+                </a>
+            </div>
+            <div class="nav-bar">
+                <ul class="nav nav-menu">
+                    <li [routerLinkActive]="['active']" class="nav-item" [routerLinkActiveOptions]="{exact:true}">
+                        <a [routerLink]="['/']" class="navlink" >Home</a>
+                    </li>
+                    <li [routerLinkActive]="['active']" class="nav-item" [routerLinkActiveOptions]="{exact:true}">
+                        <a [routerLink]="['/about']" class="navlink"  >About</a>
+                    </li>
+                    <li [routerLinkActive]="['active']" class="nav-item" [routerLinkActiveOptions]="{exact:true}">
+                        <a [routerLink]="['/service']" class="navlink"  >services</a>
+                    </li> 
+                    <li [routerLinkActive]="['active']" class="nav-item" [routerLinkActiveOptions]="{exact:true}">
+                        <a [routerLink]="['/news']" class="navlink"  >News</a>
+                    </li>
+                    <li [routerLinkActive]="['active']" class="nav-item" [routerLinkActiveOptions]="{exact:true}">
+                        <a [routerLink]="['/contact']" class="navlink"  >Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+@import '../../../styles.scss';
+
+
+.top-bar{
+    background: $primary;
+    color: $white;
+      .left{
+        padding: 10px 20px;
+          .contact-menu{
+            li{
+              margin-right: 15px;
+                .icon-wrapper{
+                  margin-right: 5px;
+                    .icon{
+                      margin: 0;
+                    }
+                }
+            }
+          }
+      }
+      .right{
+        background: $secondary;
+        padding: 10px 20px;
+        .social-menu{
+          .social-link{
+            &:hover{
+              color: $primary;
+            }
+          }
+        }
+      }
+  }
+  .main-header{
+    padding: 6px 0;
+    .nav-menu{
+      .nav-item{
+        display: inline-block;
+        .navlink{
+          font-size: 18px;
+          color: $black;
+          text-transform: capitalize;
+          padding: 0 24px;
+            &:hover{
+              color: $primary;
+            }
+        }
+      }
+      .nav-item.active{
+        .navlink{
+          color: $primary;
+        }
+      }
+    }
+  }
+  

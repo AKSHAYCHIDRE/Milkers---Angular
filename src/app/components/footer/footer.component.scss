@@ -1,0 +1,94 @@
+@import '../../../styles.scss';
+
+.footer-bg{
+    background-color: $black;
+    padding: 50px 20px 0 20px;
+    color: $footer-text-color;
+    .footer-title{
+        position: relative;
+        text-transform: capitalize;
+        padding-bottom: 12px;
+        margin-bottom: 30px;
+        color: $white;
+        &::after{
+            content: '';
+            border-bottom: 2px solid $primary;
+            position: absolute;
+            width: 50px;  
+            left: 0;
+            bottom: 0;
+        }
+    }
+    .company-info{
+        .description{
+            font-size: 14px;
+        }
+        .icon-wrapper{
+            .icon{
+                margin-right: 12px;
+                margin-left: 0;
+                height: 35px;
+                width: 34px;
+                line-height: 34px;
+            }
+        }
+    }
+    .services{
+        .services-menu{
+        .services-link{
+            color: $footer-text-color;
+                &:hover{
+                    color: $secondary;
+                }
+            }
+        } 
+    }
+    ul li{
+        margin-bottom: 2px;
+    }
+    .contact{
+        .contact-menu{
+            li{
+                a{
+                    font-size: 18px;
+                        &:hover{
+                            color: $secondary;
+                        }
+                }
+            }
+        }
+    }
+    .news-section{
+        letter-spacing: 0.8px;
+        .news-image{
+        @include image-wrapper;
+        padding: 40px;
+            img{
+            @include image-ratio;
+            }
+        } 
+        .news-description{
+            .news-title{
+                font-size: 13px;
+                margin-bottom: 4px;
+            }
+        }
+        .news-date{
+            color: $secondary;
+            font-size: 12px;
+        }
+    }
+    .bottom-footer{
+        font-size: 12px;
+        text-transform: capitalize;
+        border-top: 1px solid  darken($footer-text-color,5%);
+        letter-spacing: 1px;
+        a{
+        color: $footer-text-color;
+            &:hover{
+            color: $secondary;
+            }
+        }
+    }
+}
+  

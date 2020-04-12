@@ -1,0 +1,244 @@
+// @import "../node_modules/bootstrap/scss/bootstrap";
+
+// $theme-colors: (
+//   "primary": #b82831,
+//   "secondary": #fbfbfb,
+//   "tertiary":#b2a585,
+//   "footer-bg": #333333,
+//   "danger": #ff4136, 
+//   "heading-primary":#333333,
+//   "heading-secondary":#988a63,
+//   "text-primary":#343434,
+//   "text-secondary":#5b5b5b,
+//   "text-tertiary":#7f7f7f,
+//   "icon-color":#b0a683,
+//   "bg-color":#f9fafa,
+//   "sub-title-color":#988a63,
+//   "text-black":#000,
+//   "border-color":#eeeeee,
+// );
+
+// body{ 
+//   color: theme-color(primary);
+// }
+
+$primary: #23BCDE;
+$secondary: #764ebe;
+$black: #000;
+$white: #fff;
+$footer-text-color: rgba(255,255,255,.65);
+$sm-title-color: #999;
+$md-title-color: #1a2940;
+$p-color: #555; 
+$service-border-color: #e4e4e4;
+$team-bg: #f7f7f7;
+$team-name-color: #1a2940;
+$social-icon-color: rgba(255,255,255,.80); 
+
+// Font Poppins
+
+
+@font-face{
+  font-family: Poppins-Regular;
+  src: url(src/assets/fonts/Poppins-Regular.ttf);
+}
+@font-face{
+  font-family: Poppins-Medium;
+  src: url(src/assets/fonts/Poppins-Medium.ttf);
+}
+@font-face{
+  font-family: Poppins-Bold;
+  src: url(src/assets/fonts/Poppins-Bold.ttf);
+}
+@font-face{
+  font-family: Poppins-Semi-Bold;
+  src: url(src/assets/fonts/Poppins-SemiBold.ttf);
+}
+
+// Font Montserrat
+
+@font-face{
+  font-family: Montserrat-Regular;
+  src: url(src/assets/fonts/Montserrat-Regular.ttf);
+}
+@font-face{
+  font-family: Montserrat-Medium;
+  src: url(src/assets/fonts/Montserrat-Medium.ttf);
+}
+@font-face{
+  font-family: Montserrat-Bold;
+  src: url(src/assets/fonts/Montserrat-Bold.ttf);
+}
+@font-face{
+  font-family: Montserrat-SemiBold;
+  src: url(src/assets/fonts/Montserrat-SemiBold.ttf);
+}
+
+// Background Image Function
+
+$baseUrl: 'src/assets/images/';
+
+@function normalImg($Url){
+  @return url($baseUrl + $Url);
+}
+
+// Image Ratio
+
+@mixin image-ratio {
+    position: absolute;
+    top: 0;
+    right: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+@mixin image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+// ScrollBar CSS here 
+
+::-webkit-scrollbar-thumb {
+  background: darken($primary , 8%); 
+  border-radius: 10px;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+html,body{
+  height: 100%;
+  position: relative;
+}
+::selection{
+  background: $primary;
+  color: $white;
+}
+input:focus{
+  box-shadow: none;
+  outline: -webkit-focus-ring-color auto 0px;
+}
+.btn.focus,
+.btn:focus {
+  outline: 0;
+  box-shadow: none;
+}
+a{
+  color: $white;
+  &:hover{
+      text-decoration: none;
+      color: $secondary;
+  }
+}
+body{ 
+  min-height: 100%;
+  font: 15px/1.9  Poppins-Regular;
+}
+.container{
+  max-width: 1240px;
+}
+
+.title-section{
+  .sm-title{
+    position: relative;
+    display: block;
+    color: $sm-title-color;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font: 14px Montserrat-Regular;
+  }
+    .md-title{
+      position: relative;
+      display: block;
+      padding-left: 20px;
+      color: $md-title-color;
+      font: 35px Montserrat-Bold; 
+      &::before{
+        content: "";
+        background-color: $primary;
+        position: absolute;
+        left: 0;
+        top: 5%;
+        height: 90%;
+        width: 5px;
+      }
+    }
+    .text{
+      margin-top: 10px;
+      padding: 0 20px;
+      margin-bottom: 0;
+    }
+    .primary-button{
+      color: $white;
+      font-size: 16px;
+      text-transform: uppercase;
+      line-height: 26px;
+      padding: 15px 35px;
+      position: relative;
+      background-color: $primary;
+      overflow: hidden;
+      -webkit-transition: all 300ms linear;
+      transition: all 300ms linear;
+      border-radius: 3px;
+    }
+}
+
+.icon-wrapper{
+  .icon{
+    position: relative;
+    font-size: 14px;
+    height: 30px;
+    width: 30px;
+    line-height: 28px;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    border: 1px solid $white;
+    margin-left: 12px;
+    transition: all 0.3s ease;
+  }
+}
+.z-index{
+  z-index: 99;
+}
+
+//  OwL Carousel css here
+
+.owl-carousel.owl-drag {
+  .owl-item{
+    padding-bottom: 115px;
+  }
+  .owl-dots.disabled,
+  .owl-nav.disabled{
+    display: block;
+    position: absolute;
+    top: -101px;
+    right: 0px;
+  }
+  .owl-nav [class*=owl-]{
+    color: $p-color;
+    font-size: 16px;
+    margin: 5px;
+    padding: 8px 18px;
+    background: transparent;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 1px solid $sm-title-color;
+      &:hover{
+        border: 1px solid $primary;
+        background-color: $primary;
+        color: $white;
+      }
+  }
+}
+
+.sticky {
+  background: #fff;
+  box-shadow: 0 3px 12px 0 rgba(0,0,0,.08);
+  position: fixed;
+  top: 0;
+  height: 120px;
+  width: 100%;
+}
