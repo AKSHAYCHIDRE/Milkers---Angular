@@ -24,7 +24,7 @@
     "bootstrap": "^4.4.1",
     "font-awesome": "^4.7.0",
     "gallery": "^1.0.2",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "ngx": "^2.4.0",
     "ngx-lightbox": "^2.1.2",
     "ngx-owl-carousel": "^2.0.7",
